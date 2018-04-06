@@ -1,0 +1,24 @@
+<form class="pelicula-form" #peliculaForm="ngForm" (ngSubmit)="onSubmit(peliculaForm)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="peliculaService.selectedPelicula.id">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="userId" #userId="ngModel" [(ngModel)]="peliculaService.selectedPelicula.userId" placeholder="ID usuario" required>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="title" #title="ngModel" [(ngModel)]="peliculaService.selectedPelicula.title" placeholder="Título" required>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+      <input class="form-control" name="body" #body="ngModel" [(ngModel)]="peliculaService.selectedPelicula.body" placeholder="Descripcion" required>  
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-8">
+    <button [disabled]="!peliculaForm.valid" type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i> Submit</button>
+  </div>
+  <div class="form-group col-md-4">
+    <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(peliculaForm)"><i class="fa fa-repeat"></i> Reset</button>
+  </div>
+</div>
+</form>

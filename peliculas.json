@@ -1,0 +1,16 @@
+{
+  "pelicula": [
+    {
+      "userId": "12",
+      "title": "Prueba2",
+      "body": "Otra prueba",
+      "id": 102
+    },
+    {
+      "id": 104,
+      "userId": "2",
+      "title": "Actualidacion",
+      "body": "dfdsffdgdf"
+    }
+  ]
+}

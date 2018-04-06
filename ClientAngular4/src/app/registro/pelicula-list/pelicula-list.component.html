@@ -1,0 +1,13 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let pelicula of peliculaService.peliculaList">
+    <td>{{pelicula.userId}} - {{pelicula.id}} - {{pelicula.title}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(pelicula)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(pelicula.id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
